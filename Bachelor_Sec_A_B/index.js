@@ -12,8 +12,6 @@ app.use(express.json());
 
 connectToDatabase();
 
-app.use("/api/auth", require("./routes/userRoute"));
-
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
@@ -23,3 +21,5 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
     res.send("Roshan Kumar Khadka ")
 });
+
+https://github.com/Roshan09876/Texas_College_Bachelor_teaching
