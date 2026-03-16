@@ -1,4 +1,6 @@
 const User = require("../model/userModel");
+const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
 
 const register = async (req, res) => {
     // Destructuring the data 
@@ -19,14 +21,25 @@ const register = async (req, res) => {
             });
         }
 
+        const hashedPassword = await bcrypt.hash(password, 10)
+
         const newUser = new User({
-            firstName, lastName, email, password
+            firstName, lastName, email, password: hashedPassword
         });
+
+        const token = jwt.sign({
+            _id: newUser._id,
+            firstName: newUser.firstName,
+            lastName: newUser.lastName,
+            email: newUser.email,
+            isAdmin: newUser.isAdmin,
+        }, process.env.JWT_SECRET, { expiresIn: "1d" })
 
         await newUser.save();
         return res.status(201).json({
             success: true,
             message: "User Registered Successfully..",
+            token,
             newUser
         });
 
@@ -39,7 +52,7 @@ const register = async (req, res) => {
 }
 
 const login = async (req, res) => {
-
+    
 }
 
 module.exports = {

@@ -1,14 +1,13 @@
 const express = require("express");
 const connectToDatabase = require("./db/db");
-// const dns = require("node:dns");
 const dotenv = require("dotenv");
 dotenv.config();
 
-// dns.setServers(["1.1.1.1"]);
 
 const app = express();
+app.use(express.json());
 
-app.use("/auth", require("./routes/userRoutes"));
+app.use("/api/auth", require("./routes/userRoutes"));
 
 connectToDatabase();
 

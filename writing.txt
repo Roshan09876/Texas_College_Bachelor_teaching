@@ -1,0 +1,16 @@
+The diagram illustrates the process of generating electricity through hydropower 
+in the Hydroelectric power station using numerous steps.
+
+Overall, it is notable that, the steps required for the production of electricity are different for
+ both day and night time. However, machinery items are same to produce it. While initial step begins
+  with high level reservoir river during day time, it is opposite during night, where water is passed
+   from low level reservoir river.
+
+To begin, dam is constructed in the river to control the flow of water with Intake in the bottom part.
+ During day time, intake remained open and water is passed through penstock by controlling the flow to
+  the reversible turbine which works as operator generator. In contrast, During night time, dam intake
+   is closed and supply of water starts from Low-level reservoir river to the reversible turbines which
+    pumps water into high level reservoir to generate electricity. Moreover, after getting water supply
+     process of producing electricity is same for both timezone. Furthermore, generator starts its work 
+     inside powerhouse and pass electricity to the national grid with the help of power lines.
+
